@@ -1,1 +1,689 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>أفاق لحلول البرمجيات | Afaq for Software Solutions</title>
+
+    <meta name="description"
+          content="أفاق لحلول البرمجيات - تطوير البرمجيات والمواقع الإلكترونية وتطبيقات الجوال والحلول الرقمية.">
+
+    <meta name="keywords"
+          content="أفاق لحلول البرمجيات, تطوير البرمجيات, تصميم المواقع, تطبيقات الجوال, حلول رقمية">
+
+    <meta name="author" content="أفاق لحلول البرمجيات">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fb;
+            color: #1f2937;
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            background: #0f172a;
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.15);
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .logo span {
+            color: #38bdf8;
+        }
+
+        nav a {
+            color: white;
+            margin-right: 20px;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #0f172a, #1e3a8a);
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: #dbeafe;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 28px;
+            background: #38bdf8;
+            color: #082f49;
+            border-radius: 8px;
+            font-weight: bold;
+            margin: 5px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            background: #7dd3fc;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #38bdf8;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: #38bdf8;
+            color: #082f49;
+        }
+
+        /* ================= SECTIONS ================= */
+
+        section {
+            padding: 80px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 34px;
+            color: #0f172a;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #64748b;
+        }
+
+        /* ================= ABOUT ================= */
+
+        .about {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            font-size: 18px;
+            color: #475569;
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        }
+
+        /* ================= SERVICES ================= */
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .service-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            color: #0f172a;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: #64748b;
+        }
+
+        /* ================= PROJECTS ================= */
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px 25px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .project-card h3 {
+            margin-bottom: 10px;
+            color: #0f172a;
+        }
+
+        .project-card p {
+            color: #64748b;
+        }
+
+        /* ================= CONTACT ================= */
+
+        .contact-box {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .contact-box h3 {
+            color: #0f172a;
+            margin-bottom: 15px;
+        }
+
+        .contact-box p {
+            color: #64748b;
+        }
+
+        .email {
+            display: inline-block;
+            margin: 15px 0;
+            color: #0284c7;
+            font-size: 18px;
+            font-weight: bold;
+            direction: ltr;
+        }
+
+        .email:hover {
+            color: #0369a1;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        footer strong {
+            color: #38bdf8;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 800px) {
+
+            header {
+                flex-direction: column;
+                gap: 12px;
+                padding: 15px 5%;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 14px;
+            }
+
+            .hero {
+                min-height: 80vh;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .services,
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 60px 5%;
+            }
+
+            .section-title h2 {
+                font-size: 29px;
+            }
+
+            .about {
+                padding: 25px 20px;
+                font-size: 16px;
+            }
+
+            .email {
+                font-size: 15px;
+                word-break: break-word;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo">
+            أفاق <span>لحلول البرمجيات</span>
+        </div>
+
+        <nav>
+            <a href="#home">الرئيسية</a>
+            <a href="#about">نبذة عنا</a>
+            <a href="#services">الخدمات</a>
+            <a href="#projects">المشاريع</a>
+            <a href="#contact">اتصل بنا</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>
+                أفاق <span>لحلول البرمجيات</span>
+            </h1>
+
+            <p>
+                نبني برامج ومواقع ويب وتطبيقات جوال حديثة
+                لمساعدة الأفراد والشركات على النمو في العالم الرقمي.
+            </p>
+
+            <a href="#services" class="btn">
+                خدماتنا
+            </a>
+
+            <a href="#contact" class="btn btn-outline">
+                اتصل بنا
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about">
+
+        <div class="section-title">
+
+            <h2>نبذة عنا</h2>
+
+            <p>
+                حلول تقنية مصممة للمستقبل
+            </p>
+
+        </div>
+
+        <div class="about">
+
+            <p>
+                شركة أفاق لحلول البرمجيات هي شركة تطوير برمجيات
+                تركز على التكنولوجيا وتقدم حلولًا رقمية حديثة
+                للأفراد والشركات والمؤسسات.
+            </p>
+
+            <br>
+
+            <p>
+                نعمل على إنشاء برامج ومواقع ويب وتطبيقات جوال
+                موثوقة وسريعة الاستجابة وسهلة الاستخدام،
+                بما يلبي متطلبات التكنولوجيا الحديثة.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SERVICES ================= -->
+
+    <section id="services">
+
+        <div class="section-title">
+
+            <h2>خدماتنا</h2>
+
+            <p>
+                ما يمكننا بناؤه لك
+            </p>
+
+        </div>
+
+        <div class="services">
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    💻
+                </div>
+
+                <h3>
+                    تطوير البرمجيات
+                </h3>
+
+                <p>
+                    حلول برمجية مخصصة مصممة وفقًا
+                    لاحتياجات عملك.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🌐
+                </div>
+
+                <h3>
+                    تطوير مواقع الويب
+                </h3>
+
+                <p>
+                    مواقع ويب عصرية وسريعة الاستجابة
+                    واحترافية للشركات والمؤسسات.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    📱
+                </div>
+
+                <h3>
+                    تطبيقات الجوال
+                </h3>
+
+                <p>
+                    تطوير تطبيقات أندرويد وتطبيقات الجوال
+                    بواجهات بسيطة وسهلة الاستخدام.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🎨
+                </div>
+
+                <h3>
+                    تصميم واجهة المستخدم وتجربة المستخدم
+                </h3>
+
+                <p>
+                    واجهات مستخدم نظيفة وبديهية
+                    لتقديم تجربة استخدام أفضل.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    ⚙️
+                </div>
+
+                <h3>
+                    حلول رقمية
+                </h3>
+
+                <p>
+                    حلول رقمية عملية تساعد على تبسيط
+                    العمل وتحسين الإنتاجية.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🔧
+                </div>
+
+                <h3>
+                    الدعم الفني
+                </h3>
+
+                <p>
+                    المساعدة الفنية والصيانة للبرامج
+                    والمشاريع الرقمية.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section id="projects">
+
+        <div class="section-title">
+
+            <h2>
+                مشاريعنا
+            </h2>
+
+            <p>
+                منتجات وحلول رقمية
+            </p>
+
+        </div>
+
+        <div class="projects">
+
+            <div class="project-card">
+
+                <div class="service-icon">
+                    📱
+                </div>
+
+                <h3>
+                    تطبيقات الجوال
+                </h3>
+
+                <p>
+                    تطبيقات أندرويد مصممة للمستخدمين
+                    والشركات الحديثة.
+                </p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <div class="service-icon">
+                    🌐
+                </div>
+
+                <h3>
+                    مواقع إلكترونية
+                </h3>
+
+                <p>
+                    مواقع إلكترونية متجاوبة بتصاميم
+                    عصرية وواجهات احترافية.
+                </p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <div class="service-icon">
+                    💡
+                </div>
+
+                <h3>
+                    حلول برمجية
+                </h3>
+
+                <p>
+                    حلول رقمية مخصصة مصممة لتلبية
+                    احتياجات الأعمال المختلفة.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact">
+
+        <div class="section-title">
+
+            <h2>
+                اتصل بنا
+            </h2>
+
+            <p>
+                لنبني شيئًا رائعًا معًا
+            </p>
+
+        </div>
+
+
+        <div class="contact-box">
+
+            <h3>
+                أفاق لحلول البرمجيات
+            </h3>
+
+            <p>
+                لتطوير البرمجيات والمواقع الإلكترونية
+                وتطبيقات الجوال والحلول الرقمية،
+                تواصل معنا عبر البريد الإلكتروني.
+            </p>
+
+            <a
+                class="email"
+                href="mailto:afaq.for.software.solutions@gmail.com">
+                afaq.for.software.solutions@gmail.com
+            </a>
+
+            <br>
+
+            <a
+                class="btn"
+                href="mailto:afaq.for.software.solutions@gmail.com">
+                إرسال بريد إلكتروني
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026
+            <strong>
+                أفاق لحلول البرمجيات
+            </strong>
+            . جميع الحقوق محفوظة.
+        </p>
+
+    </footer>
+
+</body>
+</html>
